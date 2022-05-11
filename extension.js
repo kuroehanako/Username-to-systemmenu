@@ -16,7 +16,6 @@ const Me = ExtensionUtils.getCurrentExtension();
 
 //Creates temporary iconMenuItem variable
 var iconMenuItem = null;
-var hostname_lbl = null;
 
 //Creates some global variables
 let shell_Version = Config.PACKAGE_VERSION;
@@ -27,14 +26,7 @@ function init() {
 
 //Run when enabled
 function enable() {
-    //Calls the updateExtensionAppearence function to draw the first icon
-    updateExtensionAppearence();
-    hostname_lbl = new St.Button({style_class: 'hostname',
-                           reactive: false,
-                           can_focus: false,
-                           track_hover: false,
-                           label: GLib.get_host_name()});
-    Main.panel._leftBox.insert_child_at_index(hostname_lbl, 0);
+	
 }
 
 //Run when disabled
